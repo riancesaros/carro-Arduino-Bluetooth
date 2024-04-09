@@ -4,7 +4,7 @@
 // direções possivel (como o bluetooth so retorna um char, associei os valores a nomes para ficar mais facil de ler)
 #define right 'a'
 #define left 'd' 
-#define down 's'
+#define down 's' 
 #define up 'w' 
 
 // portas do sensor
@@ -48,8 +48,9 @@ void re(){
     digitalWrite(motores[/* como q faz o motor girar pra tras????????? */ 0], HIGH);
 }
 
-void loop() {
-   if(bt_serial.read()){ // Se a porta serial estiver recebendo um valor
+void loop(){
+    
+    if(bt_serial.read()){ // Se a porta serial estiver recebendo um valor
         char value = bt_serial.read(); // recebe a entrada de valor do bluetooth
        
         do {
@@ -76,8 +77,4 @@ void loop() {
             } 
         } while (value);
     };
-
-  
 }
-
-
