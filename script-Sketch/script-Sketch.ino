@@ -7,11 +7,6 @@
 #define down 's'
 #define up 'w' 
 
-#define pinMot1A 5 
-#define pinMot1B 6
-#define pinMot2A 9
-#define pinMot2B 10
-
 // portas do sensor
 #define TRIG_P 2 // recebe o sinal
 #define ECHO_P 13 // envia o sinal
@@ -54,25 +49,33 @@ void re(){
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+   if(bt_serial.read()){ // Se a porta serial estiver recebendo um valor
+        char value = bt_serial.read(); // recebe a entrada de valor do bluetooth
+       
+        do {
+            switch (value)
+            {
+            case up:
+                acelerar();
+                break;
+            
+            case down:
+                re();
+                break;
 
-  digitalWrite(pinMot1A, HIGH);
-  digitalWrite(pinMot2A, HIGH);
-  delay(1000);
-  digitalWrite(pinMot1A, LOW);
-  digitalWrite(pinMot2A, LOW);
+            case left:
+                virarEsquerda();
+                break;
 
-  digitalWrite(pinMot1A, HIGH);
-  digitalWrite(pinMot2B, HIGH);
-  delay(2000);
-  digitalWrite(pinMot1A, LOW);
-  digitalWrite(pinMot2B, LOW);
-
-  digitalWrite(pinMot2A, HIGH);
-  digitalWrite(pinMot1B, HIGH);
-  delay(2000);
-  digitalWrite(pinMot2A, LOW);
-  digitalWrite(pinMot1B, LOW);
+            case right: 
+                virarDireita();
+                break;
+                
+            default: // caso esteja tudo configurado, nem vai cair no default
+                break;
+            } 
+        } while (value);
+    };
 
   
 }
