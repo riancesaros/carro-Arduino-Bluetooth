@@ -48,24 +48,28 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-
+  //Frente
   digitalWrite(pinMot1A, HIGH);
   digitalWrite(pinMot2A, HIGH);
   delay(1000);
   digitalWrite(pinMot1A, LOW);
   digitalWrite(pinMot2A, LOW);
-
+  //Virar para direita
   digitalWrite(pinMot1A, HIGH);
   digitalWrite(pinMot2B, HIGH);
   delay(2000);
   digitalWrite(pinMot1A, LOW);
   digitalWrite(pinMot2B, LOW);
-
+  //Virar para esquerda
   digitalWrite(pinMot2A, HIGH);
   digitalWrite(pinMot1B, HIGH);
   delay(2000);
   digitalWrite(pinMot2A, LOW);
   digitalWrite(pinMot1B, LOW);
-
-  
+  //Da ré 
+  digitalWrite(pinMot1A, HIGH);
+  digitalWrite(pinMot2A, HIGH);
+  delay(1000);
+  digitalWrite(pinMot1A, LOW);
+  digitalWrite(pinMot2A, LOW);
 }
