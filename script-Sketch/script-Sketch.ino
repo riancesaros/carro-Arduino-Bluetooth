@@ -48,6 +48,7 @@ void re(){
     digitalWrite(motores[/* como q faz o motor girar pra tras????????? */ 0], HIGH);
 }
 
+<<<<<<< HEAD
 void loop(){
     
     if(bt_serial.read()){ // Se a porta serial estiver recebendo um valor
@@ -77,6 +78,30 @@ void loop(){
             } 
         } while (value);
     };
+=======
+void loop() {
+  // put your main code here, to run repeatedly:
+
+  digitalWrite(pinMot1A, HIGH);
+  digitalWrite(pinMot2A, HIGH);
+  delay(1000);
+  digitalWrite(pinMot1A, LOW);
+  digitalWrite(pinMot2A, LOW);
+
+  digitalWrite(pinMot1A, HIGH);
+  digitalWrite(pinMot2B, HIGH);
+  delay(2000);
+  digitalWrite(pinMot1A, LOW);
+  digitalWrite(pinMot2B, LOW);
+
+  digitalWrite(pinMot2A, HIGH);
+  digitalWrite(pinMot1B, HIGH);
+  delay(2000);
+  digitalWrite(pinMot2A, LOW);
+  digitalWrite(pinMot1B, LOW);
+
+  
+>>>>>>> parent of 0968aed (Update script-Sketch.ino)
 }
 
 
