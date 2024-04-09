@@ -4,8 +4,13 @@
 // direções possivel (como o bluetooth so retorna um char, associei os valores a nomes para ficar mais facil de ler)
 #define right 'a'
 #define left 'd' 
-#define down 's' 
+#define down 's'
 #define up 'w' 
+
+#define pinMot1A 5 
+#define pinMot1B 6
+#define pinMot2A 9
+#define pinMot2B 10
 
 // portas do sensor
 #define TRIG_P 2 // recebe o sinal
@@ -48,37 +53,6 @@ void re(){
     digitalWrite(motores[/* como q faz o motor girar pra tras????????? */ 0], HIGH);
 }
 
-<<<<<<< HEAD
-void loop(){
-    
-    if(bt_serial.read()){ // Se a porta serial estiver recebendo um valor
-        char value = bt_serial.read(); // recebe a entrada de valor do bluetooth
-       
-        do {
-            switch (value)
-            {
-            case up:
-                acelerar();
-                break;
-            
-            case down:
-                re();
-                break;
-
-            case left:
-                virarEsquerda();
-                break;
-
-            case right: 
-                virarDireita();
-                break;
-                
-            default: // caso esteja tudo configurado, nem vai cair no default
-                break;
-            } 
-        } while (value);
-    };
-=======
 void loop() {
   // put your main code here, to run repeatedly:
 
@@ -101,7 +75,6 @@ void loop() {
   digitalWrite(pinMot1B, LOW);
 
   
->>>>>>> parent of 0968aed (Update script-Sketch.ino)
 }
 
 
