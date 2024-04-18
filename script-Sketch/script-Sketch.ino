@@ -1,5 +1,5 @@
 // #include <SoftwareSerial.h> // permite o uso do hc-06 em qualquer porta
-// #include <hcsr04.h>
+#include <hcsr04.h>
 
 // // direções possivel (como o bluetooth so retorna um char, associei os valores a nomes para ficar mais facil de ler)
 // #define right 'a'
@@ -8,11 +8,11 @@
 // #define up 'w' 
 
 // // portas do sensor
-// #define TRIG_P 2 // recebe o sinal
-// #define ECHO_P 13 // envia o sinal
+#define TRIG_P 4 // recebe o sinal
+#define ECHO_P 3 // envia o sinal
 
 // SoftwareSerial bt_serial(11, 12); // RX e TX
-// HCSR04 hcsr04(TRIG_P, ECHO_P, 20, 4000); // cria o objeto do sensor hcsr04 ( nao implementado ao codigo )
+HCSR04 hcsr04(TRIG_P, ECHO_P, 20, 4000); // cria o objeto do sensor hcsr04 ( nao implementado ao codigo )
 
 // int gates[4] = {3, 4, 7, 8}; // portas a serem controladas pelo bluetooth
 // int motores[4] = {5, 6, 9, 10}; // motores
@@ -95,33 +95,21 @@ void setup(){
 
 void loop(){
 
+    float dist;
+    dist = hcsr04.distanceInMillimeters();
+
+
     char value;
 
     if(Serial.available()){
         value = Serial.read();
 
-        Serial.print(value);
-        Serial.print('- ');
+        Serial.write(value);
 
         switch (value) {
 
-          case '1':
-            digitalWrite(pinMot1A, LOW);
-            break;
-
-          case '2':
-            digitalWrite(pinMot1B, LOW);
-            break;
-
-          case '3':
-            digitalWrite(pinMot2A, LOW);
-            break;
-
-          case '4':
-            digitalWrite(pinMot2B, LOW);
-            break;
-
-          case 'p':
+          case 's':
+            Serial.println("parar");
             digitalWrite(pinMot1A, LOW);
             digitalWrite(pinMot1B, LOW);
             digitalWrite(pinMot2A, LOW);
@@ -129,6 +117,7 @@ void loop(){
             break;
 
           case 'w':
+            Serial.println("pra frente");
             digitalWrite(pinMot1A, HIGH);
             digitalWrite(pinMot1B, HIGH);
             break;
@@ -153,7 +142,14 @@ void loop(){
             break;
         }
 
-    } else {
+    } else if (Serial.read() == 68 || Serial.read() == "+68" || dist < 80){
+        Serial.print("Parou tudo");
+        digitalWrite(pinMot1A, LOW);
+        digitalWrite(pinMot1B, LOW);
+        digitalWrite(pinMot2A, LOW);
+        digitalWrite(pinMot2B, LOW);
 
-    }
+    } 
+
+    Serial.println(dist);
 }
