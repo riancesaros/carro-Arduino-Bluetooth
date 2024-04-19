@@ -1,0 +1,5 @@
+{
+    "board": "arduino:avr:uno",
+    "sketch": "script-Sketch\\script-Sketch.ino",
+    "port": "COM8"
+}
