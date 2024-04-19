@@ -13,6 +13,9 @@
 
 // Cria um objeto 'sonar' para o sensor de ultrassom
 NewPing sonar(TRIG_P, ECHO_P, MAX_DISTANCE);
+char prevPreviousValue = '!';
+char previousValue = '!';
+char value = '!';
 
 void setup() {
     // Configura todos os pinos dos motores como saída
@@ -36,8 +39,16 @@ void frente(){
   digitalWrite(pinMot1A, HIGH);
   digitalWrite(pinMot1B, HIGH);
 }
+void freioFrente(){
+  digitalWrite(pinMot1A, LOW);
+  digitalWrite(pinMot1B, LOW);
+}
 
 void esquerda(){
+  digitalWrite(pinMot2A, HIGH);
+  digitalWrite(pinMot1B, HIGH);
+}
+void freioEsquerda(){
   digitalWrite(pinMot2A, HIGH);
   digitalWrite(pinMot1B, HIGH);
 }
@@ -46,10 +57,18 @@ void direita(){
   digitalWrite(pinMot1A, HIGH);
   digitalWrite(pinMot2B, HIGH);
 }
+void freioDireita(){
+  digitalWrite(pinMot1A, HIGH);
+  digitalWrite(pinMot2B, HIGH);
+}
 
 void re(){
   digitalWrite(pinMot2A, HIGH);
   digitalWrite(pinMot2B, HIGH);
+}
+void freioRe(){
+  digitalWrite(pinMot2A, LOW);
+  digitalWrite(pinMot2B, LOW);
 }
 
 
@@ -59,47 +78,47 @@ void loop() {
     float dist = sonar.ping_cm();
 
     // Declara uma variável para armazenar o caractere recebido pela comunicação serial
-    char value;
 
     // Verifica se há dados disponíveis na porta serial
     if (Serial.available()) {
         // Lê o caractere disponível na porta serial
+        prevPreviousValue = previousValue;
+        previousValue = value;
         value = Serial.read();
 
         Serial.print(value);
 
         // Executa uma ação de acordo com o caractere recebido
-        switch (value) {
-            case 's': // Se receber 's', para os motores
-              freio();
-              break;
-
-            case 'w': // Se receber 'w', movimenta para frente
-              frente();
-              break;
-
-            case 'a': // Se receber 'a', movimenta para a esquerda
-              esquerda();
-              break;
-
-            case 'd': // Se receber 'd', movimenta para a direita
-              direita();
-              break;
-
-            case 'S': // Se receber 'S', movimenta para trás
-              re();
-              break;
-
-            default: 
-                break;
+        if((value == 'w' || (previousValue == 'w' && value != 'W')) || (prevPreviousValue == 'w' && previousValue != 'W' && value != 'W')){
+          frente();
+        } else if (value == 'W' || (prevPreviousValue == 'w' && previousValue == 'W')){
+          freioFrente();
         }
+
+        if((value == 's' || (previousValue == 's' && value != 'S')) || (prevPreviousValue == 's' && previousValue != 'S' && value != 'S')){
+          re();
+        } else if (value == 'S' || (prevPreviousValue == 's' && previousValue == 'S')) {
+          freioRe();
+        }
+
+        if((value == 'a' || (previousValue == 'a' && value != 'A')) || (prevPreviousValue == 'a' && previousValue != 'A' && value != 'A')){
+          esquerda();
+        } else if (value == 'A' || (prevPreviousValue == 'a' && previousValue == 'A')) {
+          freioEsquerda();
+        }
+        
+        if((value == 'd' || (previousValue == 'd' && value != 'D')) || (prevPreviousValue == 'd' && previousValue != 'D' && value != 'D')){
+          direita();
+        } else if (value == 'D' || (prevPreviousValue == 'd' && previousValue == 'D')){
+          freioDireita();
+        }
+
+
     } else if (Serial.read() == 68 || Serial.read() == '+68' || (dist > 0 && dist < 12)) {
         // Se não houver dados disponíveis na porta serial ou a leitura do sensor estiver entre 0 e 12 cm
         digitalWrite(pinMot1A, LOW);
         digitalWrite(pinMot1B, LOW);
     } 
 
-    if(value == 'wa' || value == 'aw'){
-      Serial.println('retoEsquerda');
-    }
+ 
 }
