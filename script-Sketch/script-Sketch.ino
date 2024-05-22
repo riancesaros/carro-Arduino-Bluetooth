@@ -52,23 +52,23 @@ void loop() {
 
             case 'w': // Se receber 'w', movimenta para frente
                 Serial.println("pra frente");
-                digitalWrite(pinMot1A, HIGH);
-                digitalWrite(pinMot1B, HIGH);
+                digitalWrite(pinMot1A, 180);
+                digitalWrite(pinMot1B, 180);
                 break;
 
             case 'a': // Se receber 'a', movimenta para a esquerda
-                digitalWrite(pinMot2A, HIGH);
-                digitalWrite(pinMot1B, HIGH);
+                digitalWrite(pinMot2A, 180);
+                digitalWrite(pinMot1B, 180);
                 break;
 
             case 'd': // Se receber 'd', movimenta para a direita
-                digitalWrite(pinMot1A, HIGH);
-                digitalWrite(pinMot2B, HIGH);
+                digitalWrite(pinMot1A, 180);
+                digitalWrite(pinMot2B, 180);
                 break;
 
             case 'S': // Se receber 'S', movimenta para trás
-                digitalWrite(pinMot2A, HIGH);
-                digitalWrite(pinMot2B, HIGH);
+                digitalWrite(pinMot2A, 180);
+                digitalWrite(pinMot2B, 180);
                 break;
 
             default: 
