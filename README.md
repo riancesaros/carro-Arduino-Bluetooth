@@ -1,7 +1,8 @@
 # Batalha de Robôs
 
-<img src="https://www.olimpiadasdosertaoprodutivo.com/assets/oc-icon-colored-BsW24CBa.png" style="height:500px; display: flex">
+<img src="https://www.olimpiadasdosertaoprodutivo.com/assets/oc-icon-colored-BsW24CBa.png" style="height:500px; align:center">
 <br>
+
 <!-- <p>
 Carro 4WD Bluetooth construído com um microcontrolador Arduino Uno como requisito parcial para obtenção do nota da disciplina de Projetor Integrador I do curso Técnico Integrado em Informática para Internet - Instituto Federal Baiano - Guanambi
 </p> -->
@@ -10,12 +11,14 @@ Carro 4WD Bluetooth construído com um microcontrolador Arduino Uno como requisi
 
 - [Título e Imagem de capa](#Batalha-de-Robôs)
 - [Índice](#🗂️índice)
-- [Descrição do Projeto](#📖descrição-do-projeto)
+- [Descrição do Projeto](#descrição-do-projeto)
+- [Objetivo do Projeto](#Objetivo-do-projeto)
+- [Materiais Utilizados](#Materiais-Utilizados)
   <!-- * [Status do Projeto](#status-do-Projeto) -->
   <!-- * [Funcionalidades e Demonstração da Aplicação](#funcionalidades-e-demonstração-da-aplicação) -->
   <!-- - [Acesso ao Projeto](#acesso-ao-projeto) -->
-- [Tecnologias utilizadas](#✔️Tecnologias-Utilizadas)
-- [Pessoas Desenvolvedoras do Projeto](#🖋️Autores)
+- [Tecnologias utilizadas](#Tecnologias-Utilizadas)
+- [Autores](#🖋️Autores)
 
 # 📖descrição do projeto
 
@@ -26,9 +29,24 @@ O carro 4WD Bluetooth é construído com um microcontrolador Arduino Uno como re
 
 </p>
 
+# 📌Objetivo do Projeto
+
+<p>
+Nosso objetivo é estimular a nossa criatividade e habilidades em engenharia. Queremos desafiar nossas capacidades dentro de limites de design e materiais especificados, garantindo uma competição justa e acessível para todos nós. Buscamos proporcionar um ambiente onde a inovação e o conhecimento técnico sejam incentivados, promovendo o desenvolvimento de soluções engenhosas e práticas.
+</p>  
+
+# 🛠️Materiais Utilizados
+
+- Placa Uno SMD R3 Atmega328
+- Modulo Bluetooth HC-06
+- Motor DC 3 a 6v com Redução
+- Driver Ponte H Dupla L298N
+
 # ✔️Tecnologias Utilizadas
 
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+- ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)
+
+- ![Arduino](https://img.shields.io/badge/Arduino_IDE-00979D?style=for-the-badge&logo=arduino&logoColor=white)
 
 # 🖋️Autores
 
