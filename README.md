@@ -9,16 +9,16 @@ Carro 4WD Bluetooth construído com um microcontrolador Arduino Uno como requisi
 
 # 🗂️Índice
 
-- [Título e Imagem de capa](#Batalha-de-Robôs)
-- [Índice](#🗂️índice)
+- [Título e Imagem de capa](#batalha-de-robôs)
+- [Índice](#%EF%B8%8Fíndice)
 - [Descrição do Projeto](#descrição-do-projeto)
-- [Objetivo do Projeto](#Objetivo-do-projeto)
-- [Materiais Utilizados](#Materiais-Utilizados)
+- [Objetivo do Projeto](#objetivo-do-projeto)
+- [Materiais Utilizados](#%EF%B8%8Fmateriais-utilizados)
   <!-- * [Status do Projeto](#status-do-Projeto) -->
   <!-- * [Funcionalidades e Demonstração da Aplicação](#funcionalidades-e-demonstração-da-aplicação) -->
   <!-- - [Acesso ao Projeto](#acesso-ao-projeto) -->
-- [Tecnologias utilizadas](#Tecnologias-Utilizadas)
-- [Autores](#🖋️Autores)
+- [Tecnologias utilizadas](#%EF%B8%8Ftecnologias-utilizadas)
+- [Autores](#%EF%B8%8Fautores)
 
 # 📖descrição do projeto
 
