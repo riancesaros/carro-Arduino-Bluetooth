@@ -98,5 +98,4 @@ Nosso objetivo é estimular a nossa criatividade e habilidades em engenharia. Qu
 <img src="https://imgur.com/Inx89MR.jpeg">
 <img src="https://i.imgur.com/fIKaLNJ.jpg">
 <img src="https://imgur.com/3CeiGyR.jpeg">
-<img src="https://imgur.com/MWS4mnk.jpeg">
 </div>
