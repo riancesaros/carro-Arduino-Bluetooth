@@ -1,7 +1,9 @@
 # Batalha de Robôs
 
-<img src="https://www.olimpiadasdosertaoprodutivo.com/assets/oc-icon-colored-BsW24CBa.png" style="height:500px; align:center;">
+<div align="center">
+<img src="https://www.olimpiadasdosertaoprodutivo.com/assets/oc-icon-colored-BsW24CBa.png" style="height:500px;">
 <br>
+</div>
 
 <!-- <p>
 Carro 4WD Bluetooth construído com um microcontrolador Arduino Uno como requisito parcial para obtenção do nota da disciplina de Projetor Integrador I do curso Técnico Integrado em Informática para Internet - Instituto Federal Baiano - Guanambi
