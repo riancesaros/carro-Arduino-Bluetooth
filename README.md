@@ -1,6 +1,6 @@
 # Batalha de Robôs
 
-<img src="https://www.olimpiadasdosertaoprodutivo.com/assets/oc-icon-colored-BsW24CBa.png" style="height:500px; align:center">
+<img src="https://www.olimpiadasdosertaoprodutivo.com/assets/oc-icon-colored-BsW24CBa.png" style="height:500px; align:center;">
 <br>
 
 <!-- <p>
@@ -19,6 +19,7 @@ Carro 4WD Bluetooth construído com um microcontrolador Arduino Uno como requisi
   <!-- - [Acesso ao Projeto](#acesso-ao-projeto) -->
 - [Tecnologias utilizadas](#%EF%B8%8Ftecnologias-utilizadas)
 - [Autores](#%EF%B8%8Fautores)
+- [Fotos](#fotos)
 
 # 📖descrição do projeto
 
@@ -33,7 +34,7 @@ O carro 4WD Bluetooth é construído com um microcontrolador Arduino Uno como re
 
 <p>
 Nosso objetivo é estimular a nossa criatividade e habilidades em engenharia. Queremos desafiar nossas capacidades dentro de limites de design e materiais especificados, garantindo uma competição justa e acessível para todos nós. Buscamos proporcionar um ambiente onde a inovação e o conhecimento técnico sejam incentivados, promovendo o desenvolvimento de soluções engenhosas e práticas.
-</p>  
+</p>
 
 # 🛠️Materiais Utilizados
 
@@ -88,3 +89,12 @@ Nosso objetivo é estimular a nossa criatividade e habilidades em engenharia. Qu
     </td>
     </tr>
 </table>
+
+# 📷Fotos
+
+<div style="align:center;">
+<img src="https://i.imgur.com/fIKaLNJ.jpg">
+<img src="https://imgur.com/Inx89MR.jpeg">
+<img src="https://imgur.com/3CeiGyR.jpeg">
+<img src="https://imgur.com/MWS4mnk.jpeg">
+</div>
